@@ -4,7 +4,12 @@
 
 header {
     height: 150px;
-    padding: 20px;
+    padding: 20px 3rem;
+}
+
+.header-fish {
+    width: 220px;
+    max-width: none;
 }
 
 .header-logo {
@@ -155,6 +160,7 @@ footer {
 
     font-size: 0.65rem;
 }
+
 
 
 /* ================================
