@@ -1,0 +1,116 @@
+:root {
+    --white: #ffffff;
+    --black: #3c3737;
+    --beige: #aaa393;
+    --sand: #dedbd2;
+    --brown: #49483f;
+
+    --font-heading: "Cormorant Garamond", serif;
+    --font-body: "Montserrat", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--black);
+    font-family: var(--font-body);
+
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    min-height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-heading);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+main {
+    flex: 1;
+    width: 100%;
+}
+
+
+/* SHARED TYPOGRAPHY */
+
+.eyebrow {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.brand h1,
+.footer-brand h2 {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    line-height: 0.85;
+    text-transform: uppercase;
+}
+
+.brand p,
+.footer-brand > p {
+    font-family: var(--font-body);
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+
+/* SHARED BUTTONS */
+
+.button {
+    display: inline-block;
+
+    border: 1px solid var(--white);
+
+    background-color: transparent;
+    color: var(--white);
+
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.button:hover {
+    background-color: var(--white);
+    color: var(--brown);
+
+    transform: translateY(-2px);
+}
+
+.text-link {
+    display: inline-block;
+
+    border-bottom: 1px solid currentColor;
+
+    color: var(--black);
+
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    transition: opacity 0.2s ease;
+}
+
+.text-link:hover {
+    opacity: 0.55;
+}

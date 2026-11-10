@@ -1,0 +1,265 @@
+/* ================================
+   HEADER
+   ================================ */
+
+header {
+    height: 150px;
+    padding: 20px;
+}
+
+.brand h1 {
+    font-size: clamp(3rem, 5vw, 4.5rem);
+}
+
+.brand p {
+    font-size: 0.65rem;
+    letter-spacing: 0.4em;
+}
+
+
+/* ================================
+   HERO
+   ================================ */
+
+#hero {
+    min-height: 75vh;
+
+    align-items: center;
+
+    padding:
+        clamp(3rem, 8vw, 8rem)
+        clamp(1.5rem, 7vw, 7rem);
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(37, 38, 34, 0.68) 0%,
+            rgba(37, 38, 34, 0.38) 45%,
+            rgba(37, 38, 34, 0.08) 100%
+        ),
+        url("../images/boatride.JPG");
+
+    background-size: cover;
+    background-position: center 55%;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+.eyebrow {
+    margin-bottom: 1.5rem;
+
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+}
+
+.hero-content h2 {
+    max-width: 850px;
+
+    font-size: clamp(4rem, 9vw, 8rem);
+    line-height: 0.78;
+}
+
+.hero-text {
+    max-width: 500px;
+
+    margin-top: 2rem;
+
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+}
+
+.button {
+    margin-top: 2rem;
+
+    padding: 1rem 1.6rem;
+
+    font-size: 0.7rem;
+}
+
+
+/* ================================
+   EXPERIENCE
+   ================================ */
+
+#experience {
+    grid-template-columns: 1.15fr 0.85fr;
+
+    min-height: 650px;
+}
+
+.experience-image {
+    height: auto;
+    min-height: 650px;
+    max-height: none;
+}
+
+.experience-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: clamp(3rem, 7vw, 7rem);
+}
+
+.experience-content .eyebrow {
+    margin-bottom: 1.5rem;
+}
+
+.experience-content h2 {
+    font-size: clamp(3.5rem, 6vw, 6rem);
+}
+
+.experience-content > p:not(.eyebrow) {
+    max-width: 500px;
+
+    margin-top: 1.75rem;
+
+    font-size: 0.9rem;
+}
+
+.text-link {
+    margin-top: 2.5rem;
+
+    font-size: 0.7rem;
+}
+
+
+/* ================================
+   FOOTER
+   ================================ */
+
+footer {
+    padding: 3rem 2rem 1.5rem;
+}
+
+.footer-brand h2 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+.footer-brand > p {
+    font-size: 0.65rem;
+    letter-spacing: 0.4em;
+}
+
+.footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    font-size: 0.65rem;
+}
+
+
+/* ================================
+   CHARTER
+   ================================ */
+
+#charter {
+    padding:
+        clamp(5rem, 9vw, 9rem)
+        clamp(3rem, 7vw, 7rem);
+}
+
+.charter-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+
+    align-items: end;
+
+    margin-bottom: 6rem;
+}
+
+.charter-intro .eyebrow {
+    grid-column: 1 / -1;
+    margin-bottom: -2rem;
+}
+
+.charter-intro h2 {
+    font-size: clamp(5rem, 8vw, 8rem);
+}
+
+.charter-intro > p:not(.eyebrow) {
+    margin-top: 0;
+}
+
+.charter-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.charter-detail {
+    padding: 2.5rem;
+    border-bottom: 1px solid rgba(60, 55, 55, 0.25);
+}
+
+.charter-detail:first-child {
+    padding-left: 0;
+}
+
+.charter-detail + .charter-detail {
+    border-left: 1px solid rgba(60, 55, 55, 0.25);
+}
+
+
+/* ================================
+   CATCH
+   ================================ */
+
+#catch {
+    min-height: 75vh;
+
+    align-items: center;
+
+    padding:
+        clamp(4rem, 8vw, 8rem)
+        clamp(3rem, 7vw, 7rem);
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(37, 38, 34, 0.65) 0%,
+            rgba(37, 38, 34, 0.25) 50%,
+            rgba(37, 38, 34, 0.05) 100%
+        ),
+        url("../images/fishtail.png");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.catch-content {
+    max-width: 900px;
+}
+
+.catch-content h2 {
+    font-size: clamp(5rem, 9vw, 8rem);
+}
+
+
+/* ================================
+   CONTACT
+   ================================ */
+
+#contact {
+    padding:
+       clamp(6rem, 10vw, 10rem)
+        clamp(3rem, 7vw, 7rem);
+}
+
+.contact-content {
+    max-width: 900px;
+}
+
+.contact-content h2 {
+    font-size: clamp(5rem, 8vw, 8rem);
+}
+
+.contact-actions {
+    flex-direction: row;
+    align-items: center;
+
+    gap: 2.5rem;
+}

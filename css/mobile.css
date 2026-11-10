@@ -1,0 +1,397 @@
+/* ================================
+   HEADER
+   ================================ */
+
+header {
+    width: 100%;
+    height: 120px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+
+    padding: 1.25rem;
+
+    background-color: var(--beige);
+}
+
+.brand h1 {
+    font-size: clamp(2.75rem, 14vw, 4rem);
+}
+
+.brand p {
+    margin-top: 0.4rem;
+
+    font-size: 0.6rem;
+    letter-spacing: 0.35em;
+}
+
+
+/* ================================
+   HERO
+   ================================ */
+
+#hero {
+    width: 100%;
+    min-height: calc(100svh - 120px);
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 2rem 1.25rem 3rem;
+
+    background:
+        linear-gradient(
+            0deg,
+            rgba(37, 38, 34, 0.78) 0%,
+            rgba(37, 38, 34, 0.35) 55%,
+            rgba(37, 38, 34, 0.05) 100%
+        ),
+        url("../images/boatride.JPG");
+
+    background-size: cover;
+    background-position: center;
+
+    color: var(--white);
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 38rem;
+}
+
+.eyebrow {
+    margin-bottom: 1rem;
+
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+}
+
+.hero-content h2 {
+    font-size: clamp(3.5rem, 16vw, 5.5rem);
+    font-weight: 500;
+
+    line-height: 0.82;
+    letter-spacing: -0.03em;
+}
+
+.hero-text {
+    max-width: 32rem;
+
+    margin-top: 1.5rem;
+
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+.button {
+    margin-top: 1.75rem;
+
+    padding: 1rem 1.4rem;
+
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+}
+
+
+/* ================================
+   EXPERIENCE
+   ================================ */
+
+#experience {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    width: 100%;
+
+    background-color: var(--sand);
+}
+
+.experience-image {
+    width: 100%;
+    height: 60svh;
+
+    min-height: 400px;
+    max-height: 650px;
+
+    overflow: hidden;
+}
+
+.experience-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+.experience-content {
+    padding: 4rem 1.25rem 5rem;
+}
+
+.experience-content .eyebrow {
+    margin-bottom: 1.25rem;
+}
+
+.experience-content h2 {
+    font-size: clamp(3.2rem, 14vw, 4.75rem);
+    font-weight: 500;
+
+    line-height: 0.85;
+    letter-spacing: -0.03em;
+}
+
+.experience-content > p:not(.eyebrow) {
+    max-width: 34rem;
+
+    margin-top: 1.5rem;
+
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+.text-link {
+    margin-top: 2rem;
+    padding-bottom: 0.35rem;
+
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+}
+
+
+/* ================================
+   FOOTER
+   ================================ */
+
+footer {
+    width: 100%;
+
+    padding: 3rem 1.25rem 1.5rem;
+
+    background-color: var(--brown);
+    color: var(--white);
+}
+
+.footer-brand {
+    margin-bottom: 3rem;
+}
+
+.footer-brand h2 {
+    font-size: clamp(2.75rem, 14vw, 4rem);
+}
+
+.footer-brand > p {
+    margin-top: 0.5rem;
+
+    font-size: 0.6rem;
+    letter-spacing: 0.35em;
+}
+
+.footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 0.75rem;
+
+    padding-top: 1rem;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+
+/* ================================
+   CHARTER
+   ================================ */
+
+#charter {
+    width: 100%;
+
+    padding: 5rem 1.25rem;
+
+    background-color: var(--white);
+}
+
+.charter-intro {
+    margin-bottom: 4rem;
+}
+
+.charter-intro h2 {
+    font-size: clamp(3.75rem, 16vw, 5.5rem);
+    font-weight: 500;
+
+    line-height: 0.82;
+    letter-spacing: -0.03em;
+}
+
+.charter-intro > p:not(.eyebrow) {
+    max-width: 34rem;
+
+    margin-top: 1.75rem;
+
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+.charter-details {
+    border-top: 1px solid rgba(60, 55, 55, 0.25);
+}
+
+.charter-detail {
+    padding: 2rem 0;
+
+    border-bottom: 1px solid rgba(60, 55, 55, 0.25);
+}
+
+.charter-detail span {
+    display: block;
+
+    margin-bottom: 1.25rem;
+
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+}
+
+.charter-detail h3 {
+    font-size: 2.25rem;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.charter-detail p {
+    max-width: 32rem;
+
+    margin-top: 1rem;
+
+    font-size: 0.85rem;
+    line-height: 1.7;
+}
+
+/* ================================
+   CATCH
+   ================================ */
+
+#catch {
+    position: relative;
+
+    width: 100%;
+    min-height: 80svh;
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 3rem 1.25rem;
+
+    background:
+        linear-gradient(
+            0deg,
+            rgba(37, 38, 34, 0.75) 0%,
+            rgba(37, 38, 34, 0.25) 55%,
+            rgba(37, 38, 34, 0.05) 100%
+        ),
+        url("../images/fishtail.png");
+
+    background-size: cover;
+    background-position: center;
+
+    color: var(--white);
+}
+
+.catch-content {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+}
+
+.catch-content .eyebrow {
+    margin-bottom: 1rem;
+}
+
+.catch-content h2 {
+    font-size: clamp(3.75rem, 17vw, 5.5rem);
+    font-weight: 500;
+
+    line-height: 0.8;
+    letter-spacing: -0.03em;
+}
+
+
+/* ================================
+   CONTACT
+   ================================ */
+
+#contact {
+    width: 100%;
+
+    padding: 6rem 1.25rem;
+
+    background-color: var(--beige);
+}
+
+.contact-content {
+    max-width: 38rem;
+}
+
+.contact-content h2 {
+    font-size: clamp(3.75rem, 16vw, 5.5rem);
+    font-weight: 500;
+
+    line-height: 0.82;
+    letter-spacing: -0.03em;
+}
+
+.contact-content > p:not(.eyebrow) {
+    max-width: 32rem;
+
+    margin-top: 1.75rem;
+
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+.contact-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 1.5rem;
+
+    margin-top: 2.5rem;
+}
+
+.contact-button {
+    display: inline-block;
+
+    padding: 1rem 1.5rem;
+
+    background-color: var(--brown);
+    color: var(--white);
+
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.contact-link {
+    padding-bottom: 0.35rem;
+
+    border-bottom: 1px solid currentColor;
+
+    color: var(--black);
+
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+
+    text-decoration: none;
+    text-transform: uppercase;
+}
