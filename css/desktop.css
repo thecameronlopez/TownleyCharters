@@ -263,3 +263,63 @@ footer {
 
     gap: 2.5rem;
 }
+
+
+
+/* ================================
+   PRICING
+   ================================ */
+
+#pricing {
+    padding:
+        clamp(6rem, 9vw, 9rem)
+        clamp(3rem, 7vw, 7rem);
+}
+
+.pricing-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 5rem;
+    align-items: end;
+
+    margin-bottom: 5rem;
+}
+
+.pricing-header .eyebrow {
+    grid-column: 1 / -1;
+
+    margin-bottom: -2rem;
+}
+
+.pricing-header h2 {
+    font-size: clamp(5rem, 8vw, 8rem);
+}
+
+.pricing-header > p:not(.eyebrow) {
+    margin-top: 0;
+}
+
+.pricing-grid {
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 1.5rem;
+}
+
+.price-card {
+    min-height: 550px;
+
+    padding: 2.5rem;
+}
+
+.price-details {
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+}
+
+.price-button {
+    margin-top: auto;
+    padding: 1rem 1.5rem;
+}
