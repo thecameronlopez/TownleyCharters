@@ -1,0 +1,4 @@
+.dev.vars
+.env
+*.service-account.json
+service-acco*nt.json
