@@ -6,5 +6,9 @@
     "assets": {
         "directory": "./",
         "binding": "ASSETS"
-    }
+    },
+    "vars": {
+    "GOOGLE_CALENDAR_ID": "a8bd0b499569b1c6f82e5f451b8bbb8534dc464fc92f2d750f1c9b0ef70ee05c@group.calendar.google.com",
+    "GOOGLE_CLIENT_EMAIL": "townley-calendar-reader@townley-calendar-test.iam.gserviceaccount.com"
+  }
 }
