@@ -33,6 +33,11 @@ export default {
 
 
 async function getAvailability(url, env) {
+    if (!env.GOOGLE_CALENDAR_ID) {
+        throw new Error("Missing GOOGLE_CALENDAR_ID");
+    }
+
+    
     const now = new Date();
 
     const year =
@@ -118,6 +123,14 @@ async function getAvailability(url, env) {
 
 
 async function getGoogleAccessToken(env) {
+    if (!env.GOOGLE_CLIENT_EMAIL) {
+        throw new Error("Missing GOOGLE_CLIENT_EMAIL");
+    }
+
+    if (!env.GOOGLE_PRIVATE_KEY) {
+        throw new Error("Missing GOOGLE_PRIVATE_KEY");
+
+    }    
     const now = Math.floor(Date.now() / 1000);
 
     const header = {
