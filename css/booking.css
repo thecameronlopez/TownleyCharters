@@ -1,0 +1,368 @@
+/* ================================
+   BOOKING PAGE
+   ================================ */
+
+.booking-main {
+    width: 100%;
+
+    background-color: var(--sand);
+}
+
+
+.calendar-error {
+    grid-column: 1 / -1;
+
+    padding: 3rem 1rem;
+
+    font-size: 0.85rem;
+    line-height: 1.7;
+    text-align: center;
+
+    color: var(--black);
+}
+
+
+.calendar-day.past {
+    opacity: 0.3;
+
+    background-color: transparent;
+    color: var(--black);
+
+    border-color: rgba(60, 55, 55, 0.15);
+}
+
+
+/* ================================
+   INTRO
+   ================================ */
+
+.booking-intro {
+    padding: 4rem 1.25rem 3rem;
+}
+
+.booking-back {
+    display: inline-block;
+
+    margin-bottom: 3rem;
+
+    color: var(--black);
+
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.booking-intro h2 {
+    font-size: clamp(3.5rem, 15vw, 5.25rem);
+    font-weight: 500;
+
+    line-height: 0.82;
+    letter-spacing: -0.03em;
+}
+
+.booking-intro-text {
+    max-width: 34rem;
+
+    margin-top: 1.5rem;
+
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+
+/* ================================
+   AVAILABILITY
+   ================================ */
+
+.availability-section {
+    padding: 0 1.25rem 5rem;
+}
+
+
+/* ================================
+   CALENDAR
+   ================================ */
+
+.calendar {
+    width: 100%;
+
+    padding: 1.25rem;
+
+    background-color: var(--white);
+}
+
+.calendar-header {
+    display: grid;
+    grid-template-columns: 44px 1fr 44px;
+    align-items: center;
+
+    margin-bottom: 2rem;
+}
+
+.calendar-header h3 {
+    font-size: 2rem;
+    font-weight: 500;
+
+    text-align: center;
+}
+
+.calendar-nav {
+    width: 44px;
+    height: 44px;
+
+    border: 1px solid rgba(60, 55, 55, 0.25);
+
+    background: transparent;
+    color: var(--black);
+
+    font: inherit;
+    font-size: 1.25rem;
+
+    cursor: pointer;
+}
+
+
+/* DAYS OF WEEK */
+
+.calendar-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+
+    margin-bottom: 0.5rem;
+}
+
+.calendar-weekdays span {
+    font-size: 0.55rem;
+    font-weight: 600;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: rgba(60, 55, 55, 0.55);
+}
+
+
+/* CALENDAR GRID */
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+
+    gap: 0.3rem;
+}
+
+.calendar-day {
+    aspect-ratio: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid transparent;
+
+    background: transparent;
+    color: var(--black);
+
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+
+    cursor: pointer;
+}
+
+.calendar-day.available {
+    border-color: rgba(60, 55, 55, 0.2);
+}
+
+.calendar-day.available:hover {
+    background-color: var(--beige);
+}
+
+.calendar-day.unavailable {
+    background-color: var(--brown);
+    color: var(--white);
+
+    cursor: not-allowed;
+}
+
+.calendar-day.selected {
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.calendar-day.empty {
+    pointer-events: none;
+}
+
+
+/* ================================
+   LEGEND
+   ================================ */
+
+.calendar-legend {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 1.5rem;
+
+    margin-top: 2rem;
+    padding-top: 1rem;
+
+    border-top: 1px solid rgba(60, 55, 55, 0.15);
+
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+}
+
+.calendar-legend > div {
+    display: flex;
+    align-items: center;
+
+    gap: 0.5rem;
+}
+
+.availability-dot {
+    width: 9px;
+    height: 9px;
+
+    display: inline-block;
+
+    border-radius: 50%;
+}
+
+.availability-dot.available {
+    border: 1px solid var(--brown);
+    background-color: transparent;
+}
+
+.availability-dot.unavailable {
+    background-color: var(--brown);
+}
+
+
+/* ================================
+   SELECTED DATE
+   ================================ */
+
+.date-selection {
+    margin-top: 1rem;
+    padding: 2rem;
+
+    background-color: var(--beige);
+}
+
+.date-selection h3 {
+    font-size: clamp(2.5rem, 11vw, 4rem);
+    font-weight: 500;
+
+    line-height: 1;
+}
+
+#selected-date-message {
+    margin-top: 1rem;
+
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+
+/* ================================
+   BOOKING ACTIONS
+   ================================ */
+
+.booking-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 1.25rem;
+
+    margin-top: 2rem;
+}
+
+.booking-button {
+    display: inline-block;
+
+    padding: 1rem 1.5rem;
+
+    background-color: var(--brown);
+    color: var(--white);
+
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.booking-text-link {
+    padding-bottom: 0.35rem;
+
+    border-bottom: 1px solid currentColor;
+
+    color: var(--black);
+
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
+/* ================================
+   DESKTOP
+   ================================ */
+
+@media (min-width: 800px) {
+
+    .booking-intro {
+        padding:
+            clamp(5rem, 8vw, 8rem)
+            clamp(3rem, 7vw, 7rem)
+            4rem;
+    }
+
+    .booking-intro h2 {
+        font-size: clamp(5rem, 8vw, 8rem);
+    }
+
+    .availability-section {
+        display: grid;
+        grid-template-columns: minmax(500px, 1fr) minmax(320px, 0.65fr);
+
+        gap: 2rem;
+
+        align-items: start;
+
+        padding:
+            0
+            clamp(3rem, 7vw, 7rem)
+            clamp(6rem, 9vw, 9rem);
+    }
+
+    .calendar {
+        padding: 2rem;
+    }
+
+    .calendar-day {
+        font-size: 0.9rem;
+    }
+
+    .date-selection {
+        margin-top: 0;
+        padding: 3rem;
+    }
+
+    .booking-actions {
+        flex-direction: row;
+        align-items: center;
+
+        gap: 2rem;
+    }
+}

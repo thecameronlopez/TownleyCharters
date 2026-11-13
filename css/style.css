@@ -54,6 +54,20 @@ main {
     text-transform: uppercase;
 }
 
+.brand {
+    color: inherit;
+    text-decoration: none;
+}
+
+.header-mark {
+    display: block;
+    line-height: 0;
+}
+
+.header-fish {
+    display: block;
+}
+
 .brand h1,
 .footer-brand h2 {
     font-family: var(--font-heading);

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -13,29 +14,173 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/mobile.css">
-    <link rel="stylesheet" href="css/booking.css" >
+    <link rel="stylesheet" href="css/booking.css">
 
     <link
         rel="stylesheet"
         href="css/desktop.css"
         media="(min-width: 800px)"
     >
-    <title>Townley Charters - Booking</title>
+
+    <title>Availability | Townley Charters</title>
 </head>
+
 <body>
+
     <header>
-        <div class="brand">
+        <a href="index.html" class="brand">
             <h1>Townley</h1>
             <p>Charter & Co.</p>
-        </div>
+        </a>
 
-        <img
-            src="images/Fishtransparent.PNG"
-            alt=""
-            class="header-fish"
+        <a
+            href="index.html"
+            class="header-mark"
+            aria-label="Townley Charter & Co. home"
         >
+            <img
+                src="images/Fishtransparent.PNG"
+                alt=""
+                class="header-fish"
+            >
+        </a>
     </header>
-    <main></main>
+
+
+    <main class="booking-main">
+
+        <section class="booking-intro">
+
+            <a href="index.html" class="booking-back">
+                ← Back to Townley
+            </a>
+
+            <p class="eyebrow">
+                Charter Availability
+            </p>
+
+            <h2>
+                Find Your<br>
+                Day on the Water.
+            </h2>
+
+            <p class="booking-intro-text">
+                Select an available date below to start planning your
+                trip with Townley Charter & Co.
+            </p>
+
+        </section>
+
+
+        <section class="availability-section">
+
+            <div class="calendar">
+
+                <div class="calendar-header">
+
+                    <button
+                        id="previous-month"
+                        class="calendar-nav"
+                        type="button"
+                        aria-label="Previous month"
+                    >
+                        ←
+                    </button>
+
+                    <h3 id="calendar-month">
+                        Loading...
+                    </h3>
+
+                    <button
+                        id="next-month"
+                        class="calendar-nav"
+                        type="button"
+                        aria-label="Next month"
+                    >
+                        →
+                    </button>
+
+                </div>
+
+
+                <div class="calendar-weekdays">
+                    <span>Sun</span>
+                    <span>Mon</span>
+                    <span>Tue</span>
+                    <span>Wed</span>
+                    <span>Thu</span>
+                    <span>Fri</span>
+                    <span>Sat</span>
+                </div>
+
+
+                <div
+                    id="calendar-days"
+                    class="calendar-days"
+                >
+                </div>
+
+
+                <div class="calendar-legend">
+
+                    <div>
+                        <span class="availability-dot available"></span>
+                        Available
+                    </div>
+
+                    <div>
+                        <span class="availability-dot unavailable"></span>
+                        Unavailable
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="date-selection"
+                class="date-selection"
+                hidden
+            >
+
+                <p class="eyebrow">
+                    Selected Date
+                </p>
+
+                <h3 id="selected-date">
+                </h3>
+
+                <p id="selected-date-message">
+                </p>
+
+                <div class="booking-actions">
+
+                    <a
+                        id="booking-call"
+                        href="tel:+13373683273"
+                        class="booking-button"
+                    >
+                        Call to Book
+                    </a>
+
+                    <a
+                        id="booking-text"
+                        href="sms:+13373683273"
+                        class="booking-text-link"
+                    >
+                        Text to Book
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
     <footer>
         <div class="footer-brand">
             <h2>Townley</h2>
@@ -47,5 +192,9 @@
             <p>&copy; 2026 Townley Charter & Co.</p>
         </div>
     </footer>
+
+
+    <script src="js/calendar.js"></script>
+
 </body>
 </html>
