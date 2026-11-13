@@ -18,7 +18,7 @@ export default {
                 return Response.json(
                     {
                         success: false,
-                        error: error.message
+                        error: "Unable to load availability"
                     },
                     {
                         status: 500

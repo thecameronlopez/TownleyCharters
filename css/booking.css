@@ -31,6 +31,15 @@
     border-color: rgba(60, 55, 55, 0.15);
 }
 
+.calendar-nav:disabled {
+    opacity: 0.25;
+    cursor: not-allowed;
+}
+
+.calendar-nav:not(:disabled):hover {
+    background-color: var(--beige);
+}
+
 
 /* ================================
    INTRO

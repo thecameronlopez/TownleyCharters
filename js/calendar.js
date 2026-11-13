@@ -14,8 +14,19 @@ const PHONE_NUMBER = "+13373683273";
 const today = new Date();
 today.setHours(0, 0, 0, 0);
 
-let displayedYear = today.getFullYear();
-let displayedMonth = today.getMonth(); // 0-based: January = 0
+const MIN_YEAR = today.getFullYear();
+const MIN_MONTH = today.getMonth();
+
+const MAX_MONTHS_AHEAD = 12;
+
+const maxDate = new Date(
+    MIN_YEAR,
+    MIN_MONTH + MAX_MONTHS_AHEAD,
+    1
+);
+
+let displayedYear = MIN_YEAR;
+let displayedMonth = MIN_MONTH; // 0-based: January = 0
 
 let selectedButton = null;
 
@@ -32,6 +43,11 @@ loadCalendar();
 */
 
 previousMonthButton.addEventListener("click", () => {
+    if (isAtMinimumMonth){
+        return;
+    }
+    
+    
     displayedMonth--;
 
     if (displayedMonth < 0) {
@@ -44,6 +60,11 @@ previousMonthButton.addEventListener("click", () => {
 
 
 nextMonthButton.addEventListener("click", () => {
+    if (isAtMaximumMonth()) {
+        return;
+    }
+
+
     displayedMonth++;
 
     if (displayedMonth > 11) {
@@ -61,6 +82,7 @@ nextMonthButton.addEventListener("click", () => {
 
 async function loadCalendar() {
     clearSelection();
+    updateNavigationButtons();
 
     calendarDays.innerHTML = "";
 
@@ -118,6 +140,13 @@ async function loadCalendar() {
     ANY busy event on a date makes the whole day unavailable.
 */
 
+/*
+    Townley Charter & Co. operates a maximum of one
+    charter per calendar day.
+
+    Therefore, any busy interval returned by the admin
+    Google Calendar makes the entire date unavailable.
+*/
 function getUnavailableDates(busyPeriods) {
     const unavailableDates = new Set();
 
@@ -388,4 +417,24 @@ function formatLongDate(date) {
             year: "numeric"
         }
     ).format(date);
+}
+
+
+function isAtMinimumMonth(){
+    return (
+        displayedYear === MIN_YEAR &&
+        displayedMonth === MIN_MONTH
+    );
+}
+
+function isAtMaximumMonth() {
+    return (
+        displayedYear === maxDate.getFullYear() &&
+        displayedMonth === maxDate.getMonth()
+    );
+}
+
+function updateNavigationButtons() {
+    previousMonthButton.disabled = isAtMinimumMonth();
+    nextMonthButton.disabled = isAtMaximumMonth();
 }

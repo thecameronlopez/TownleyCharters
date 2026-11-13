@@ -1,4 +1,10 @@
+# Cloudflare / local secrets
 .dev.vars
+.dev.vars.*
 .env
+.env.*
+
+# Google credentials
+service-account.json
 *.service-account.json
-service-acco*nt.json
+*credentials*.json
