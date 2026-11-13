@@ -43,7 +43,7 @@ loadCalendar();
 */
 
 previousMonthButton.addEventListener("click", () => {
-    if (isAtMinimumMonth){
+    if (isAtMinimumMonth()){
         return;
     }
     
